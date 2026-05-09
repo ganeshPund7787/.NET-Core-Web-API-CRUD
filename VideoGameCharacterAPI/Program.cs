@@ -1,4 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using VideoGameCharacterAPI.Data;
+using VideoGameCharacterAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,9 +11,18 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddDbContext<AppDBContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<
+                            IVideoGameCharacterService, 
+                            VideoGameCharacterService
+                            >();
+
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeli
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
