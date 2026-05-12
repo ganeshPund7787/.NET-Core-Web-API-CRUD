@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="Database-Connection-Practice/Database-Connection-Practice.csproj" Id="60a89a3b-4f45-44ad-bf71-4276c562a330" />
+  <Project Path="Practice-CRUD-Operation/Practice-CRUD-Operation-1.csproj" Id="9a24a970-87d4-4823-8e9a-9e51e91c3082" />
   <Project Path="VideoGameCharacterAPI/VideoGameCharacterAPI.csproj" />
 </Solution>

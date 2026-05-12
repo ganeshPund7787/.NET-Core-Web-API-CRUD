@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using VideoGameCharacterAPI.DTOs;
-using VideoGameCharacterAPI.Models;
 using VideoGameCharacterAPI.Services;
 
 namespace VideoGameCharacterAPI.Controllers
